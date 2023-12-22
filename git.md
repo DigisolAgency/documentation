@@ -17,6 +17,11 @@ application, the reviewer must utilize the "request changes" option to
 signal the developer that the new changes will have an adverse effect on
 existing functionalities, and as a result, the PR cannot be merged.
 
+### Commits
+
+Use [conventional commits guide](https://www.conventionalcommits.org/en/v1.0.0/) 
+to properly name your changes.
+
 ### GitHub Actions
 
 Pull requests in the master/main or dev branches trigger GitHub actions to
