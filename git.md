@@ -1,25 +1,29 @@
 # Work with git
 
-### Branches 
+### Branches
 
-- `master/main`   - production server
-- `dev`           - staging server ( dev.digisol.agency )
+- `master/main` - Production Server
+- `dev` - Staging Server (dev.digisol.agency)
 
 ### Rules
 
-Do not push directly into master/main or dev. Only via PR.
+- **Do not push directly into master/main or dev. Only via PR.**
+- **Every PR should include a description of the changes you want to merge
+into the branch.**
+- **Every PR should be verified and approved.**
 
-Every PR should contain description of changes you want to include in to the branch.
+If the changes are anticipated to break other functionalities within the
+application, the reviewer must utilize the "request changes" option to
+signal the developer that the new changes will have an adverse effect on
+existing functionalities, and as a result, the PR cannot be merged.
 
-Every PR should be verified and approved. 
+### GitHub Actions
 
-If changes will break other functionality in application, reviewer should use "request changes" to signal developer that new changes will break other functionality 
-and this PR can't be merged.
+Pull requests in the master/main or dev branches trigger GitHub actions to
+push changes on the server and build the application. The GitHub Actions
+configurations are located in ./github/workflows.
 
-
-
-### Github actions
-
-PR in master/main or dev branches trigger github action to push changes on server, build application.
-
-Github actions configs located in `./github/workflows`
+Additionally, it's crucial to adhere to these guidelines to maintain a smooth
+and efficient development process. Clear communication through detailed PR
+descriptions and through verification processes helps ensure the stability
+of our production and staging environments.
