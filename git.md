@@ -3,7 +3,7 @@
 ### Branches
 
 - `master/main` - Production Server
-- `dev` - Staging Server (dev.digisol.agency)
+- `dev` - Staging Server
 
 ### Rules
 
@@ -20,7 +20,47 @@ existing functionalities, and as a result, the PR cannot be merged.
 ### Commits
 
 Use [conventional commits guide](https://www.conventionalcommits.org/en/v1.0.0/) 
-to properly name your changes.
+to properly name your changes. Based on commits names semantic versioning will be
+calculating.
+
+New feature commit example:
+```
+feat: add new feature
+```
+This commit will trigger changing version, for example, from 0.1.0 to 0.2.0
+
+Patch or fix:
+```
+fix: change page title
+```
+This commit will trigger changing version, for example, from 0.2.0 to 0.2.1
+
+New major version:
+```
+release: New application major version
+```
+This commit will trigger changing version, for example, from 0.2.0 to 1.0.0.
+
+All other conventional commits prefixes will not affect on versioning change.
+
+**Note:** In large scale applications prefixes can have `scope` sufix like this:
+```
+feat(auth): add cookie based authorisation
+fix(api): update oathkeeper configuration files.
+```
+Or:
+```
+feat: (auth) add cookie based authorisation
+fix: (api) update oathkeeper configuration files.
+```
+Depends on project guidelines.
+
+#### Commits description
+
+Instead of long commit title, you can use commit description:
+```bash
+git commit -m "Title" -m "Description ..........";
+```
 
 ### GitHub Actions
 
