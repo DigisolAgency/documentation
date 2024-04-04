@@ -1,7 +1,5 @@
 # Alegora Marketplace
 
-# Digisol website
-
 Create folder on server:
 
 ```bash
